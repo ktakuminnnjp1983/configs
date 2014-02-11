@@ -46,4 +46,3 @@ if [ ! -e ~/.commonrc ]; then
     ln -s ${ROOT_GITHUBDIR}/configs/.commonrc ~/.commonrc
 fi
 
-exit 0
