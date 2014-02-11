@@ -7,28 +7,23 @@
 # ------------------------------
 # General Settings
 # ------------------------------
-if [ ! -e $HOME/gitdirs/github/configs -o ! -e $HOME/gitdirs/github/vim ]; then
-    echo "gitdirs not exist"
-    exit 1
-fi
+ROOTDIR=/home/kobayashi
+ROOT_GITDIR=${ROOTDIR}/gitdirs
+ROOT_GITHUBDIR=${ROOT_GITDIR}/github
 
-if [ ! -e ~/.commonrc ]; then
-    ln -s ~/gitdirs/github/configs/.commonrc ~/.commonrc
-fi
 . ~/.commonrc
 
-if [ -e $HOME/.commonfxrc ]; then
-    . $HOME/.commonfxrc
+#----- zsh-completions
+if [ ! -e ~/gitdirs/zsh-completions ]; then
+    git clone https://github.com/zsh-users/zsh-completions ~/gitdirs/zsh-completions
 fi
-
 fpath=(~/gitdirs/zsh-completions/src $fpath)
-#----- auto-fu
 
+#----- auto-fu
 if [ ! -e ~/gitdirs/auto-fu.zsh/auto-fu.zsh ]; then
     echo "auto-fu.zsh is not available"
     git clone https://github.com/hchbaw/auto-fu.zsh ~/gitdirs/auto-fu.zsh
 fi
-
 source ~/gitdirs/auto-fu.zsh/auto-fu.zsh
 function zle-line-init ()
 {
