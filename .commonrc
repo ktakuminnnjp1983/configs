@@ -1,23 +1,25 @@
-if [ ! -e $HOME/.bashrc ]; then
-    ln -s /home/kobayashi/.bashrc $HOME/.bashrc 
+if [ ! -e $HOME/gitdirs/github/configs -o ! -e $HOME/gitdirs/github/vim ]; then
+    echo "gitdirs not exist"
+    exit 1
 fi
-if [ ! -e $HOME/.bash_history ]; then
-    ln -s /home/kobayashi/.bash_history $HOME/.bash_history 
+if [ ! -e $HOME/.bashrc ]; then
+    ln -s /home/kobayashi/gitdirs/github/configs/.bashrc $HOME/.bashrc 
 fi
 if [ ! -e $HOME/.zshrc ]; then
-    ln -s /home/kobayashi/.zshrc $HOME/.zshrc 
-fi
-if [ ! -e $HOME/.zsh_history ]; then
-    ln -s /home/kobayashi/.zsh_history $HOME/.zsh_history 
+    ln -s /home/kobayashi/gitdirs/github/configs/.zshrc $HOME/.zshrc 
 fi
 if [ ! -e $HOME/.vimrc ]; then
-    ln -s /home/kobayashi/.vimrc $HOME/.vimrc 
+    ln -s /home/kobayashi/gitdirs/github/vim/.vimrc $HOME/.vimrc 
 fi
 if [ ! -e $HOME/.vim ]; then
-    ln -s /home/kobayashi/.vim $HOME/.vim 
+    ln -s /home/kobayashi/gitdirs/github/vim/.vim $HOME/.vim 
 fi
-if [ ! -e $HOME/gitdirs ]; then
-    ln -s /home/kobayashi/gitdirs $HOME/gitdirs 
+
+if [ $UID -eq 0 -a ! -e $HOME/.bash_history ]; then
+    ln -s /home/kobayashi/.bash_history $HOME/.bash_history 
+fi
+if [ $UID -eq 0 -a ! -e $HOME/.zsh_history ]; then
+    ln -s /home/kobayashi/.zsh_history $HOME/.zsh_history 
 fi
 
 if [ -e $HOME/.commonfxrc ]; then
