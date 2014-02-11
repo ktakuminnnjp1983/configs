@@ -1,0 +1,51 @@
+if [ ! -e $HOME/.bashrc ]; then
+    ln -s /home/kobayashi/.bashrc $HOME/.bashrc 
+fi
+if [ ! -e $HOME/.bash_history ]; then
+    ln -s /home/kobayashi/.bash_history $HOME/.bash_history 
+fi
+if [ ! -e $HOME/.zshrc ]; then
+    ln -s /home/kobayashi/.zshrc $HOME/.zshrc 
+fi
+if [ ! -e $HOME/.zsh_history ]; then
+    ln -s /home/kobayashi/.zsh_history $HOME/.zsh_history 
+fi
+if [ ! -e $HOME/.vimrc ]; then
+    ln -s /home/kobayashi/.vimrc $HOME/.vimrc 
+fi
+if [ ! -e $HOME/.vim ]; then
+    ln -s /home/kobayashi/.vim $HOME/.vim 
+fi
+if [ ! -e $HOME/gitdirs ]; then
+    ln -s /home/kobayashi/gitdirs $HOME/gitdirs 
+fi
+
+if [ -e $HOME/.commonfxrc ]; then
+    . $HOME/.commonfxrc
+fi
+
+export NAME="kobayashi"
+export FULLNAME="Takumi Kobayashi"
+
+export PATH=/home/kobayashi/myscript:/home/kobayashi/desktop/myscript:/home/kobayashi/local/bin:/home/kobayashi/bin:/usr/local/bin:$PATH
+
+export VIMRC=~/.vimrc
+
+if [ -e /usr/java/ ]; then
+    export JAVA_HOME=/usr/java/jdk1.7.0_05
+    export JAVA_BINDIR=/$JAVA_HOME/bin
+    export PATH=$JAVA_HOME/bin:$PATH
+    export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
+fi
+
+alias m='make install'
+alias pg='ps -e | grep '
+alias ctags='ctags -f .tags'
+alias findjavap="netstat -lpt 2> /dev/null | grep java | awk 'NR==1{print \$7}' | sed -e 's/\(.*\)\/\(.*\)/\1/'"
+
+ulimit -c unlimited
+FIGNORE=CVS:.svn
+
+. ~/gitdirs/nvm/nvm.sh 
+nvm use v0.11.10 > /dev/null
+
