@@ -38,6 +38,8 @@ if [ -e /usr/java/ ]; then
     export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
 fi
 
+alias ls='ls --color=auto'
+alias grep='grep --color'
 alias m='make install'
 alias pg='ps -e | grep '
 alias ctags='ctags -f .tags'
