@@ -65,7 +65,7 @@ setopt extended_glob # グロブ機能を拡張する
 unsetopt caseglob    # ファイルグロブで大文字小文字を区別しない
 
 ### cdr ###
-autoload -Uz chpwd_recent_dirs cdr
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ":chpwd:*" recent-dirs-max 100
 zstyle ":chpwd:*" recent-dirs-default on
