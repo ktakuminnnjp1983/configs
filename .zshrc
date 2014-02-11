@@ -11,6 +11,7 @@
 
 if [ ! -e ~/gitdirs/zsh-completions ]; then
     echo "zsh-completions is not available"
+    git clone https://github.com/zsh-users/zsh-completions ~/gitdirs/zsh-completions
 fi
 fpath=(~/gitdirs/zsh-completions/src $fpath)
 #----- auto-fu
@@ -24,6 +25,7 @@ if [ -f ~/gitdirs/auto-fu.zsh/auto-fu.zsh ]; then
     zstyle ':completion:*' completer _oldlist _complete
 else
     echo "auto-fu.zsh is not available"
+    git clone https://github.com/hchbaw/auto-fu.zsh ~/gitdirs/auto-fu.zsh
 fi
 
 # apt-get/aptitudenの親切機能が効かなくなる
