@@ -22,10 +22,6 @@ if [ $UID -eq 0 -a ! -e $HOME/.zsh_history ]; then
     ln -s /home/kobayashi/.zsh_history $HOME/.zsh_history 
 fi
 
-if [ -e $HOME/.commonfxrc ]; then
-    . $HOME/.commonfxrc
-fi
-
 export NAME="kobayashi"
 export FULLNAME="Takumi Kobayashi"
 

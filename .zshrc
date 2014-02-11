@@ -7,7 +7,14 @@
 # ------------------------------
 # General Settings
 # ------------------------------
-. /home/kobayashi/.commonrc
+if [ ! -e ~/.commonrc ]; then
+    ln -s ~/gitdirs/github/configs/.commonrc ~/.commonrc
+fi
+. ~/.commonrc
+
+if [ -e $HOME/.commonfxrc ]; then
+    . $HOME/.commonfxrc
+fi
 
 if [ ! -e ~/gitdirs/zsh-completions ]; then
     echo "zsh-completions is not available"
@@ -15,18 +22,19 @@ if [ ! -e ~/gitdirs/zsh-completions ]; then
 fi
 fpath=(~/gitdirs/zsh-completions/src $fpath)
 #----- auto-fu
-if [ -f ~/gitdirs/auto-fu.zsh/auto-fu.zsh ]; then
-    source ~/gitdirs/auto-fu.zsh/auto-fu.zsh
-    function zle-line-init ()
-    {
-        auto-fu-init
-    }
-    zle -N zle-line-init
-    zstyle ':completion:*' completer _oldlist _complete
-else
+
+if [ ! -e ~/gitdirs/auto-fu.zsh/auto-fu.zsh ]; then
     echo "auto-fu.zsh is not available"
     git clone https://github.com/hchbaw/auto-fu.zsh ~/gitdirs/auto-fu.zsh
 fi
+
+source ~/gitdirs/auto-fu.zsh/auto-fu.zsh
+function zle-line-init ()
+{
+    auto-fu-init
+}
+zle -N zle-line-init
+zstyle ':completion:*' completer _oldlist _complete
 
 # apt-get/aptitudenの親切機能が効かなくなる
 # http://d.hatena.ne.jp/nishimura1986/20121211/1355204483
