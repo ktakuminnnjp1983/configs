@@ -1,29 +1,35 @@
-if [ ! -e $HOME/gitdirs/github/configs -o ! -e $HOME/gitdirs/github/vim ]; then
-    echo "gitdirs not exist"
-    exit 1
+ROOT_GITHUBDIR=/home/kobayashi/gitdirs/github
+ROOTDIR=/home/kobayashi
+
+if [ ! -e ${ROOT_GITHUBDIR}/configs ]; then
+    git clone git@github.com:ktakuminnnjp1983/configs ${ROOT_GITHUBDIR}/configs
 fi
-if [ ! -e $HOME/.bashrc ]; then
-    ln -s /home/kobayashi/gitdirs/github/configs/.bashrc $HOME/.bashrc 
-fi
-if [ ! -e $HOME/.zshrc ]; then
-    ln -s /home/kobayashi/gitdirs/github/configs/.zshrc $HOME/.zshrc 
-fi
-if [ ! -e $HOME/.vimrc ]; then
-    ln -s /home/kobayashi/gitdirs/github/vim/.vimrc $HOME/.vimrc 
-fi
-if [ ! -e $HOME/.vim ]; then
-    ln -s /home/kobayashi/gitdirs/github/vim/.vim $HOME/.vim 
+if [ ! -e ${ROOT_GITHUBDIR}/vim ]; then
+    git clone git@github.com:ktakuminnnjp1983/vim ${ROOT_GITHUBDIR}/vim
 fi
 
-if [ $UID -eq 0 -a ! -e $HOME/.bash_history ]; then
-    ln -s /home/kobayashi/.bash_history $HOME/.bash_history 
+if [ ! -e ~/.bashrc ]; then
+    ln -s ${ROOT_GITHUBDIR}/configs/.bashrc ~/.bashrc 
 fi
-if [ $UID -eq 0 -a ! -e $HOME/.zsh_history ]; then
-    ln -s /home/kobayashi/.zsh_history $HOME/.zsh_history 
+if [ ! -e ~/.zshrc ]; then
+    ln -s ${ROOT_GITHUBDIR}/configs/.zshrc ~/.zshrc 
+fi
+if [ ! -e ~/.vimrc ]; then
+    ln -s ${ROOT_GITHUBDIR}/vim/.vimrc ~/.vimrc 
 fi
 
-if [ -e $HOME/.commonfxrc ]; then
-    . $HOME/.commonfxrc
+if [ $UID -eq 0 -a ! -e ~/.vim ]; then
+    ln -s ${ROOTDIR}/.vim ~/.vim 
+fi
+if [ $UID -eq 0 -a ! -e ~/.bash_history ]; then
+    ln -s ${ROOTDIR}/.bash_history /.bash_history 
+fi
+if [ $UID -eq 0 -a ! -e ~/.zsh_history ]; then
+    ln -s ${ROOTDIR}/.zsh_history ~/.zsh_history 
+fi
+
+if [ -e ${ROOTDIR}/.commonfxrc ]; then
+    . ${ROOTDIR}/.commonfxrc
 fi
 
 export NAME="kobayashi"

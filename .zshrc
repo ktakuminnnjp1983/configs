@@ -9,10 +9,6 @@
 # ------------------------------
 . /home/kobayashi/.commonrc
 
-if [ ! -e ~/gitdirs/zsh-completions ]; then
-    echo "zsh-completions is not available"
-    git clone https://github.com/zsh-users/zsh-completions ~/gitdirs/zsh-completions
-fi
 fpath=(~/gitdirs/zsh-completions/src $fpath)
 #----- auto-fu
 if [ -f ~/gitdirs/auto-fu.zsh/auto-fu.zsh ]; then
