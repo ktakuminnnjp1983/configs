@@ -9,6 +9,9 @@
 # ------------------------------
 . /home/kobayashi/.commonrc
 
+if [ ! -e ~/gitdirs/zsh-completions ]; then
+    echo "zsh-completions is not available"
+fi
 fpath=(~/gitdirs/zsh-completions/src $fpath)
 #----- auto-fu
 if [ -f ~/gitdirs/auto-fu.zsh/auto-fu.zsh ]; then
@@ -19,6 +22,14 @@ if [ -f ~/gitdirs/auto-fu.zsh/auto-fu.zsh ]; then
     }
     zle -N zle-line-init
     zstyle ':completion:*' completer _oldlist _complete
+else
+    echo "auto-fu.zsh is not available"
+fi
+
+# apt-get/aptitudenの親切機能が効かなくなる
+# http://d.hatena.ne.jp/nishimura1986/20121211/1355204483
+if [ -e /etc/zsh_command_not_found ]; then
+    . /etc/zsh_command_not_found
 fi
 
 # autoload predict-on
