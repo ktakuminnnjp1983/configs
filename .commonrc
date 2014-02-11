@@ -46,6 +46,8 @@ alias findjavap="netstat -lpt 2> /dev/null | grep java | awk 'NR==1{print \$7}' 
 ulimit -c unlimited
 FIGNORE=CVS:.svn
 
-. ~/gitdirs/nvm/nvm.sh 
-nvm use v0.11.10 > /dev/null
+if [ -e ~/gitdirs/nvm/ ]; then
+    . ~/gitdirs/nvm/nvm.sh 
+    nvm use v0.11.10 > /dev/null
+fi
 
