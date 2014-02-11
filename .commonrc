@@ -30,7 +30,7 @@ export FULLNAME="Takumi Kobayashi"
 export PATH=/home/kobayashi/myscript:/home/kobayashi/desktop/myscript:/home/kobayashi/local/bin:/home/kobayashi/bin:/usr/local/bin:$PATH
 
 export VIMRC=~/.vimrc
-exprt SVN_EDITOR="vim"
+export SVN_EDITOR="vim"
 
 if [ -e /usr/java/ ]; then
     export JAVA_HOME=/usr/java/jdk1.7.0_05
