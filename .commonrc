@@ -27,7 +27,7 @@ fi
 export NAME="kobayashi"
 export FULLNAME="Takumi Kobayashi"
 
-export PATH=/home/kobayashi/libexec/git-core:/home/kobayashi/myscript:/home/kobayashi/desktop/myscript:/home/kobayashi/local/bin:/home/kobayashi/bin:/usr/local/libexec/git-core:/usr/local/bin:$PATH
+export PATH=/home/kobayashi/myscript:/home/kobayashi/desktop/myscript:/home/kobayashi/local/bin:/home/kobayashi/bin:/usr/local/libexec/git-core:/usr/local/bin:$PATH
 
 export VIMRC=~/.vimrc
 
