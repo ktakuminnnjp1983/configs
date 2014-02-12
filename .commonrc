@@ -27,7 +27,8 @@ alias ctags='ctags -f .tags'
 alias findjavap="netstat -lpt 2> /dev/null | grep java | awk 'NR==1{print \$7}' | sed -e 's/\(.*\)\/\(.*\)/\1/'"
 
 function gc(){
-    if [ 0 eq  `git commit -a -m "mod"` ]; then
+    git commit -a -m "mod"
+    if [ 0 -eq $? ]; then
         git push
     fi
 }
