@@ -24,9 +24,11 @@ if [ ! -e ~/gitdirs/auto-fu.zsh/auto-fu.zsh ]; then
     echo "auto-fu.zsh is not available"
     git clone https://github.com/hchbaw/auto-fu.zsh ~/gitdirs/auto-fu.zsh
 fi
-source ~/gitdirs/auto-fu.zsh/auto-fu.zsh
+# source ~/gitdirs/auto-fu.zsh/auto-fu.zsh
 function zle-line-init ()
 {
+    # ここに書かないとdelete home あたりのキー入力がうまくいかない
+    source ~/gitdirs/auto-fu.zsh/auto-fu.zsh
     auto-fu-init
 }
 function zle-line-finish ()
