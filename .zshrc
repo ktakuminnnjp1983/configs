@@ -156,6 +156,24 @@ SPROMPT=$tmp_sprompt  # スペル訂正用プロンプト
   PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
 ;
 
+# zshではchpwd関数乎定義するとcdしたときに呼ばれる
+function chpwd(){
+    if [ 30 -ge `ls -1 | wc -l` ]; then
+        ls
+    else
+        echo "many files"
+    fi
+}
+# 以下のようにすると複数登録可能
+# function testcd(){
+    # echo "test"
+# }
+# function testcd2(){
+    # echo "test2"
+# }
+# chpwd_functions+=testcd
+# chpwd_functions+=testcd2
+
 ### Title (user@hostname) ###
 case "${TERM}" in
 kterm*|xterm*|)
