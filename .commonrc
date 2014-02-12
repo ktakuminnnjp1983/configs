@@ -28,6 +28,7 @@ alias findjavap="netstat -lpt 2> /dev/null | grep java | awk 'NR==1{print \$7}' 
 
 alias gc='git commit -a -m "mod"'
 
+
 ulimit -c unlimited
 FIGNORE=CVS:.svn
 
