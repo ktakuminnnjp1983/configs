@@ -45,6 +45,11 @@ if [ -e /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
+if [ ! -e ~/gitdirs/zaw/ ]; then
+    echo "auto-fu.zsh is not available"
+    git clone https://github.com/zsh-users/zaw ~/gitdirs/zaw
+fi
+
 # autoload predict-on
 # predict-on
 
@@ -197,3 +202,7 @@ kterm*|xterm*|)
   ;;
 esac
 
+# zaw settings cdrを使うためには autoload cdr よりあとでないとだめっぽい
+. ~/gitdirs/zaw/zaw.zsh
+bindkey 'd' zaw-cdr
+bindkey 'h' zaw-history 
