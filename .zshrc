@@ -29,8 +29,13 @@ function zle-line-init ()
 {
     auto-fu-init
 }
+function zle-line-finish ()
+{
+}
 zle -N zle-line-init
+zle -N zle-line-finish
 zstyle ':completion:*' completer _oldlist _complete
+zstyle ':auto-fu:var' track-keymap-skip delete-char
 
 # apt-get/aptitudenの親切機能が効かなくなる
 # http://d.hatena.ne.jp/nishimura1986/20121211/1355204483
@@ -80,11 +85,10 @@ bindkey -M menuselect 'l' vi-forward-char
 
 ### zshでdelete home end が意図どおり動かない場合に対応centosとか ###
 # C-v key で出る [3~ [1~ [4~ 
-bindkey "^?"    backward-delete-char
-bindkey "^H"    backward-delete-char
-bindkey "^[[3~" delete-char
-bindkey "^[[1~" beginning-of-line
-bindkey "^[[4~" end-of-line
+bindkey ""    backward-delete-char
+bindkey "[3~" delete-char
+bindkey "[1~" beginning-of-line
+bindkey "[4~" end-of-line
 
 ### Glob ###
 setopt extended_glob # グロブ機能を拡張する
