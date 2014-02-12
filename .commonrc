@@ -29,6 +29,7 @@ alias findjavap="netstat -lpt 2> /dev/null | grep java | awk 'NR==1{print \$7}' 
 function gc(){
     git commit -a -m "mod"
     if [ 0 -eq $? ]; then
+        echo "commit succeeded"
         git push
     fi
 }
