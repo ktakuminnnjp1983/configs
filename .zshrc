@@ -100,7 +100,7 @@ bindkey "[4~" end-of-line
 # 通常、エイリアスというのはコマンドラインの第1要素だけを対象にしか展開できませんが、
 # zshのグローバルエイリアスglobalaliasはコマンドラインの任意の場所で展開できます。
 alias -g @l='| less'
-alias -g @G='| grep -i '
+alias -g @g='| grep -i '
 
 ### Glob ###
 setopt extended_glob # グロブ機能を拡張する
