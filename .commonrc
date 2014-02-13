@@ -35,6 +35,23 @@ function gc(){
         echo "nothing to commit"
     fi
 }
+function kobayashi(){
+    echo kobayashi
+}
+function tf(){
+    echo $#
+    if [  $# = 0 ]; then
+        echo "arg error. input target [word]"
+        return 
+    fi 
+    # -F ではファイルがローテートされた場合でも追跡するらしい --retry と同等
+    if [ $# = 1 ]; then
+        tail -F $1
+    else
+        echo gori
+        tail -F $1 | grep -i $2
+    fi
+}
 
 ulimit -c unlimited
 FIGNORE=CVS:.svn
