@@ -211,3 +211,5 @@ esac
 . ~/gitdirs/zaw/zaw.zsh
 bindkey 'd' zaw-cdr
 bindkey 'h' zaw-history 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

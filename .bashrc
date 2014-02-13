@@ -14,3 +14,5 @@ shopt -u histappend
 export HISTSIZE=50000
 export HISTFILESIZE=$HISTSIZE 
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

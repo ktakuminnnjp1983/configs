@@ -56,8 +56,16 @@ function tf(){
 ulimit -c unlimited
 FIGNORE=CVS:.svn
 
+# node.js nvm
 if [ -e ~/gitdirs/nvm/ ]; then
     . ~/gitdirs/nvm/nvm.sh 
     nvm use v0.11.10 > /dev/null
 fi
+
+# ruby rvm
+if [ -e ~/.rvm/scripts/rvm ]; then
+    . ~/.rvm/scripts/rvm 
+    rvm use 1.9.3 > /dev/null
+fi
+
 
