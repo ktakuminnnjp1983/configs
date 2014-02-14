@@ -65,7 +65,7 @@ fi
 # ruby rvm
 if [ -e ~/.rvm/scripts/rvm ]; then
     . ~/.rvm/scripts/rvm 
-    rvm use 1.9.3 > /dev/null
+    rvm use 2.0.0 >/dev/null 2>&1
 fi
 
 
