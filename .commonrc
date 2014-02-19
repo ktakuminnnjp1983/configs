@@ -54,8 +54,8 @@ function tf(){
 }
 
 ulimit -c unlimited
-export FIGNORE=.svn:.git:CSV
-fignore=(.svn .git CSV)
+export FIGNORE=.svn:.git
+fignore=(.svn .git)
 # node.js nvm
 if [ -e ~/gitdirs/nvm/ ]; then
     . ~/gitdirs/nvm/nvm.sh 
