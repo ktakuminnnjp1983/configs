@@ -68,4 +68,7 @@ if [ -e ~/.rvm/scripts/rvm ]; then
     rvm use 1.9.3 >/dev/null 2>&1
 fi
 
+ls
+
+
 
