@@ -101,6 +101,7 @@ bindkey "[4~" end-of-line
 # zshのグローバルエイリアスglobalaliasはコマンドラインの任意の場所で展開できます。
 alias -g @l='| less'
 alias -g @g='| grep -i '
+alias -g @x='| xargs '
 
 ### Glob ###
 setopt extended_glob # グロブ機能を拡張する
