@@ -1,8 +1,11 @@
 # .bashrc
-ROOT_GITHUBDIR=/home/kobayashi/gitdirs/github
-ROOTDIR=/home/kobayashi
 
-. ~/.commonrc
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+. /home/kobayashi/.commonrc
 
 function share_history {
     history -a
