@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [ -e ${ROOTDIR}/.commonfxrc ]; then
-    . ${ROOTDIR}/.commonfxrc
+if [ -e ./.commonfxrc ]; then
+    . ./.commonfxrc
 fi
 
 export NAME="kobayashi"
