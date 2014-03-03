@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [ -e ./.commonfxrc ]; then
-    . ./.commonfxrc
+if [ -e /home/kobayashi/.commonfxrc ]; then
+    . /home/kobayashi/.commonfxrc
 fi
 
 export NAME="kobayashi"
