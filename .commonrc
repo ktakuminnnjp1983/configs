@@ -26,7 +26,7 @@ alias pg='ps -e | grep '
 alias ctags='ctags -f .tags'
 alias findjavap="netstat -lpt 2> /dev/null | grep java | awk 'NR==1{print \$7}' | sed -e 's/\(.*\)\/\(.*\)/\1/'"
 
-alias vim='env LANG=en_US.UTF-8 vim'
+alias vim='env LANG=en_US.UTF-8 LANGUAGE=en vim'
 
 function gc(){
     git commit -a -m "mod"
