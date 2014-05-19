@@ -1,5 +1,13 @@
 #!/bin/sh
 
+sudo yum install firefox
+sudo yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker
+sudo yum install mercurial
+sudo yum install ncurses ncurses-devel
+sudo yum install python-devel ruby-devel
+sudo yum install lua lua-devel
+sudo yum lvm2
+
 ROOTDIR=/home/kobayashi
 ROOT_GITDIR=${ROOTDIR}/gitdirs
 ROOT_GITHUBDIR=${ROOT_GITDIR}/github
@@ -22,21 +30,23 @@ if [ ! -e ${ROOT_GITHUBDIR}/vim ]; then
     git clone git@github.com:ktakuminnnjp1983/vim ${ROOT_GITHUBDIR}/vim
 fi
 
-if [ ! -e ~/.bashrc ]; then
-    ln -s ${ROOT_GITHUBDIR}/configs/.bashrc ~/.bashrc 
+if [ ! -e ~/.vim ]; then
+    echo mk .vim
+    mkdir ~/.vim
+    mkdir ~/.vim/undo
+    ln -s ${ROOT_GITHUBDIR}/vim/after ~/.vim
 fi
-if [ ! -e ~/.zshrc ]; then
-    ln -s ${ROOT_GITHUBDIR}/configs/.zshrc ~/.zshrc 
-fi
-if [ ! -e ~/.vimrc ]; then
-    ln -s ${ROOT_GITHUBDIR}/vim/.vimrc ~/.vimrc 
-fi
+
+rm ~/.bashrc ~/.zshrc ~/.vimrc
+ln -s ${ROOT_GITHUBDIR}/configs/.bashrc ~/.bashrc 
+ln -s ${ROOT_GITHUBDIR}/configs/.zshrc ~/.zshrc 
+ln -s ${ROOT_GITHUBDIR}/vim/.vimrc ~/.vimrc 
 
 if [ $UID -eq 0 -a ! -e ~/.vim ]; then
     ln -s ${ROOTDIR}/.vim ~/.vim 
 fi
 if [ $UID -eq 0 -a ! -e ~/.bash_history ]; then
-    ln -s ${ROOTDIR}/.bash_history /.bash_history 
+    ln -s ${ROOTDIR}/.bash_history ~/.bash_history 
 fi
 if [ $UID -eq 0 -a ! -e ~/.zsh_history ]; then
     ln -s ${ROOTDIR}/.zsh_history ~/.zsh_history 
