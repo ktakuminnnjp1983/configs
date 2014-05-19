@@ -7,6 +7,8 @@ sudo yum install ncurses ncurses-devel
 sudo yum install python-devel ruby-devel
 sudo yum install lua lua-devel
 sudo yum lvm2
+sudo yum install pcre pcre-devel
+sudo yum install xz-devel
 
 ROOTDIR=/home/kobayashi
 ROOT_GITDIR=${ROOTDIR}/gitdirs
