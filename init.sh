@@ -9,6 +9,7 @@ sudo yum install lua lua-devel
 sudo yum lvm2
 sudo yum install pcre pcre-devel
 sudo yum install xz-devel
+sudo yum install python-docutils
 
 ROOTDIR=/home/kobayashi
 ROOT_GITDIR=${ROOTDIR}/gitdirs
