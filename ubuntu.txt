@@ -1,0 +1,4 @@
+apt-get するにはシステムのプロキシ設定が必要
+
+udo apt-get -y install vim-gtk vim-athena vim-gnome
+http://mba-hack.blogspot.jp/2013/02/clipboard.html

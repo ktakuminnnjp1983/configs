@@ -1,0 +1,98 @@
+●デスクトップを英語化
+~$ LANG=C xdg-user-dirs-gtk-update
+●一般ユーザでsudo
+http://www.maruko2.com/mw/%E4%B8%80%E8%88%AC%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92_sudo_%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B
+visudo
+●コンソール
+スクロール　色変更
+●フォントインストール
+Inconsolata.otf medium 13
+●ブラウザ入れる
+yum install firefox
+プロキシ設定
+proxy.kdc.fujixerox.co.jp:8080
+●corkscrew-2.0
+./configure
+make
+sudo make install
+●ssh設定
+~/.ssh/configをコピー
+●githubにpublickey登録
+ssh-keygen
+公開鍵登録
+ssh git@github.com
+●git インストール
+git clone https://github.com/git/git
+yum install perl-ExtUtils-CBuilder.i686 perl-ExtUtils-MakeMaker.i686
+make prefix=/usr/local all
+sudo make prefix=/usr/local install /usr/local/libexec/git-core/ /usr/local/bin にインストールされる
+●設定ファイルをコピー
+.commonfxrc
+.gitconfig
+.gitignore
+●init.sh実行
+sh ./init.sh
+●myscriptsをコピー
+●vim
+centosのhgはバージョン低くてだめぽい
+ubuntuからもらおう
+export CPPFLAGS="-I/usr/include -I/usr/lib/perl5/CORE"
+export LD_LIBRARY_PATH=/usr/lib/
+perlはなくてもいいね
+.vim/bundle git clone https://github.com/Shougo/neobundle.vim 
+vimprocする
+●hgインストール
+sudo yum install python-docutils
+wget http://mercurial.selenic.com/release/mercurial-2.8.tar.gz
+ubuntuからもらおう
+●zsh-5.0.5
+terminal handling lib 必要
+yum install ncurses.i686 ncurses-devel.i686 
+./configure
+make
+sudo make install
+/etc/shells に /usr/local/bin/zsh追加
+chsh
+rootも
+●eclipse
+jdk入れる
+プレアデスを解凍。コピー
+●.subversion/configコピー
+一回checkoutしないと.subversionできない
+●disk拡張
+http://blog.as-is.net/2006/11/vmware.html
+/sbin/fdisk /dev/sda
+n p 3 w
+reboot
+/sbin/pvcreate /dev/sda3
+/sbin/vgextend VolGroup /dev/sda3
+/sbin/lvextend -L +80G /dev/VolGroup/lv_root
+/sbin/resize2fs /dev/VolGroup/lv_root
+●yum環境
+rpmforge http://pkgs.repoforge.org/rpmforge-release/ rpmforge-release-0.5.3-1.el6.rf.i686.rpm 
+yamlとか入れられる
+epelはncと競合するのでやめとく
+GistBoxのcentos項目を参考にIPV6を無効化する dns設定はいらなそう
+●ag
+yum install pcre pcre-devel
+yum install xz-devel
+./build.sh
+make install 
+●rvm
+yum install ruby-devel
+コンパイルエラーで直接なおしてことも考える
+curl -L get.rvm.io | bash -s stable
+rvm　最新に
+rvm get head
+rvm get latest
+rvm install可能なリスト取得 rvm list known
+●nvm
+git clone git://github.com/creationix/nvm.git ~/gitdirs/nvm
+nvm ls 
+nvm ls-romote
+●chrome
+wget http://people.centos.org/hughesjr/chromium/6/chromium-el6.repo
+yum install chromium
+
+
+
