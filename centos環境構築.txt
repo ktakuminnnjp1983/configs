@@ -1,72 +1,73 @@
-œƒfƒXƒNƒgƒbƒv‚ğ‰pŒê‰»
+â—ãƒ‡ã‚¹ã‚¯ãƒˆãƒƒãƒ—ã‚’è‹±èªåŒ–
 ~$ LANG=C xdg-user-dirs-gtk-update
-œˆê”Êƒ†[ƒU‚Åsudo
+â—ä¸€èˆ¬ãƒ¦ãƒ¼ã‚¶ã§sudo
+https://qiita.com/Esfahan/items/a159753d156d23baf180
 http://www.maruko2.com/mw/%E4%B8%80%E8%88%AC%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%92_sudo_%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B
 visudo
-œƒRƒ“ƒ\[ƒ‹
-ƒXƒNƒ[ƒ‹@F•ÏX
-œƒtƒHƒ“ƒgƒCƒ“ƒXƒg[ƒ‹
+â—ã‚³ãƒ³ã‚½ãƒ¼ãƒ«
+ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã€€è‰²å¤‰æ›´
+â—ãƒ•ã‚©ãƒ³ãƒˆã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 Inconsolata.otf medium 13
-œƒuƒ‰ƒEƒU“ü‚ê‚é
+â—ãƒ–ãƒ©ã‚¦ã‚¶å…¥ã‚Œã‚‹
 yum install firefox
-ƒvƒƒLƒVİ’è
+ãƒ—ãƒ­ã‚­ã‚·è¨­å®š
 proxy.kdc.fujixerox.co.jp:8080
-œcorkscrew-2.0
+â—corkscrew-2.0
 https://github.com/oscarh/corkscrew/
-github tools‚É“ü‚ê‚½
+github toolsã«å…¥ã‚ŒãŸ
 ./configure
 make
 sudo make install
-œsshİ’è
-~/.ssh/config‚ğƒRƒs[
-œgithub‚Épublickey“o˜^
+â—sshè¨­å®š
+~/.ssh/configã‚’ã‚³ãƒ”ãƒ¼
+â—githubã«publickeyç™»éŒ²
 ssh-keygen
-ŒöŠJŒ®“o˜^
+å…¬é–‹éµç™»éŒ²
 ssh git@github.com
-œgit ƒCƒ“ƒXƒg[ƒ‹
-git clone ‚Å unsupported xx ¨ yum update -y nss curl libcurl
-Git‚ğƒ\[ƒXƒR[ƒh‚©‚çƒCƒ“ƒXƒg[ƒ‹‚·‚é
+â—git ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+git clone ã§ unsupported xx â†’ yum update -y nss curl libcurl
+Gitã‚’ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã‹ã‚‰ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹
 https://qiita.com/347lionz/items/a18c5b11df45a7c2e67d
 git clone https://github.com/git/git
 yum install perl-ExtUtils-CBuilder.i686 perl-ExtUtils-MakeMaker.i686
 make prefix=/usr/local all
-sudo make prefix=/usr/local install /usr/local/libexec/git-core/ /usr/local/bin ‚ÉƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚é
-œİ’èƒtƒ@ƒCƒ‹‚ğƒRƒs[
+sudo make prefix=/usr/local install /usr/local/libexec/git-core/ /usr/local/bin ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã‚‹
+â—è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚³ãƒ”ãƒ¼
 .commonfxrc
 .gitconfig
 .gitignore
-œinit.shÀs
+â—init.shå®Ÿè¡Œ
 sh ./init.sh
-œmyscripts‚ğƒRƒs[
-œvim
-centos‚Ìhg‚Íƒo[ƒWƒ‡ƒ“’á‚­‚Ä‚¾‚ß‚Û‚¢
-ubuntu‚©‚ç‚à‚ç‚¨‚¤
+â—myscriptsã‚’ã‚³ãƒ”ãƒ¼
+â—vim
+centosã®hgã¯ãƒãƒ¼ã‚¸ãƒ§ãƒ³ä½ãã¦ã ã‚ã½ã„
+ubuntuã‹ã‚‰ã‚‚ã‚‰ãŠã†
 export CPPFLAGS="-I/usr/include -I/usr/lib/perl5/CORE"
 export LD_LIBRARY_PATH=/usr/lib/
-perl‚Í‚È‚­‚Ä‚à‚¢‚¢‚Ë
+perlã¯ãªãã¦ã‚‚ã„ã„ã­
 .vim/bundle git clone https://github.com/Shougo/neobundle.vim 
-vimproc make ‚·‚é
-œhgƒCƒ“ƒXƒg[ƒ‹
+vimproc make ã™ã‚‹
+â—hgã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 sudo yum install python-docutils
 wget http://mercurial.selenic.com/release/mercurial-2.8.tar.gz
-ubuntu‚©‚ç‚à‚ç‚¨‚¤
-œzsh-5.0.5
-ÅV‚Ìzsh‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚éè‡
+ubuntuã‹ã‚‰ã‚‚ã‚‰ãŠã†
+â—zsh-5.0.5
+æœ€æ–°ã®zshã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹æ‰‹é †
 https://qiita.com/d-dai/items/084cace7f6bfd3580f9d
-terminal handling lib •K—v
+terminal handling lib å¿…è¦
 yum install ncurses.i686 ncurses-devel.i686 
 ./configure
 make
 sudo make install
-/etc/shells ‚É /usr/local/bin/zsh’Ç‰Á
+/etc/shells ã« /usr/local/bin/zshè¿½åŠ 
 chsh
-root‚à
-œeclipse
-jdk“ü‚ê‚é
-ƒvƒŒƒAƒfƒX‚ğ‰ğ“€BƒRƒs[
-œ.subversion/configƒRƒs[
-ˆê‰ñcheckout‚µ‚È‚¢‚Æ.subversion‚Å‚«‚È‚¢
-œdiskŠg’£
+rootã‚‚
+â—eclipse
+jdkå…¥ã‚Œã‚‹
+ãƒ—ãƒ¬ã‚¢ãƒ‡ã‚¹ã‚’è§£å‡ã€‚ã‚³ãƒ”ãƒ¼
+â—.subversion/configã‚³ãƒ”ãƒ¼
+ä¸€å›checkoutã—ãªã„ã¨.subversionã§ããªã„
+â—diskæ‹¡å¼µ
 http://blog.as-is.net/2006/11/vmware.html
 /sbin/fdisk /dev/sda
 n p 3 w
@@ -75,12 +76,12 @@ reboot
 /sbin/vgextend VolGroup /dev/sda3
 /sbin/lvextend -L +80G /dev/VolGroup/lv_root
 /sbin/resize2fs /dev/VolGroup/lv_root
-œyumŠÂ‹«
+â—yumç’°å¢ƒ
 rpmforge http://pkgs.repoforge.org/rpmforge-release/ rpmforge-release-0.5.3-1.el6.rf.i686.rpm 
-yaml‚Æ‚©“ü‚ê‚ç‚ê‚é
-epel‚Ínc‚Æ‹£‡‚·‚é‚Ì‚Å‚â‚ß‚Æ‚­
-GistBox‚Ìcentos€–Ú‚ğQl‚ÉIPV6‚ğ–³Œø‰»‚·‚é dnsİ’è‚Í‚¢‚ç‚È‚»‚¤
-œag
+yamlã¨ã‹å…¥ã‚Œã‚‰ã‚Œã‚‹
+epelã¯ncã¨ç«¶åˆã™ã‚‹ã®ã§ã‚„ã‚ã¨ã
+GistBoxã®centosé …ç›®ã‚’å‚è€ƒã«IPV6ã‚’ç„¡åŠ¹åŒ–ã™ã‚‹ dnsè¨­å®šã¯ã„ã‚‰ãªãã†
+â—ag
 yum install pcre pcre-devel
 yum install xz-devel
 $ git clone https://github.com/ggreer/the_silver_searcher
@@ -88,19 +89,19 @@ $ cd the_silver_searcher
 $ ./build.sh && install
 ./build.sh
 make install 
-œrvm
+â—rvm
 yum install ruby-devel
-ƒRƒ“ƒpƒCƒ‹ƒGƒ‰[‚Å’¼Ú‚È‚¨‚µ‚Ä‚±‚Æ‚àl‚¦‚é
+ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚¨ãƒ©ãƒ¼ã§ç›´æ¥ãªãŠã—ã¦ã“ã¨ã‚‚è€ƒãˆã‚‹
 curl -L get.rvm.io | bash -s stable
-rvm@ÅV‚É
+rvmã€€æœ€æ–°ã«
 rvm get head
 rvm get latest
-rvm install‰Â”\‚ÈƒŠƒXƒgæ“¾ rvm list known
-œnvm
+rvm installå¯èƒ½ãªãƒªã‚¹ãƒˆå–å¾— rvm list known
+â—nvm
 git clone git://github.com/creationix/nvm.git ~/gitdirs/nvm
 nvm ls 
 nvm ls-romote
-œchrome
+â—chrome
 wget http://people.centos.org/hughesjr/chromium/6/chromium-el6.repo
 yum install chromium
 
