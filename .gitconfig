@@ -1,0 +1,19 @@
+[user]
+	name = Takumi Kobayashi
+	email = takumi.kobayashi@fujixerox.co.jp
+[http]
+	proxy = http://proxy.kdc.fujixerox.co.jp:8080
+	sslVerify = false
+[https]
+	proxy = https://proxy.kdc.fujixerox.co.jp:8080
+	sslVerify = false
+
+[diff]
+	external = git_diff_wrapper
+[pager]
+    	diff =
+[push]
+	default = simple
+[core]
+    	excludesfile = ~/.gitignore
+
