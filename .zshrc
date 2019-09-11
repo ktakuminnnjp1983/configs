@@ -102,6 +102,7 @@ bindkey "[4~" end-of-line
 alias -g @l='| less'
 alias -g @g='| grep -i '
 alias -g @x='| xargs '
+alias -g @t=' 2>&1 | tee '
 
 ### Glob ###
 setopt extended_glob # グロブ機能を拡張する
