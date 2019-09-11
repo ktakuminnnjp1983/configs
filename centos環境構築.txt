@@ -103,8 +103,7 @@ git clone git://github.com/creationix/nvm.git ~/gitdirs/nvm
 nvm ls 
 nvm ls-romote
 ●chrome
-wget http://people.centos.org/hughesjr/chromium/6/chromium-el6.repo
-yum install chromium
+https://www.karelie.net/how-to-install-google-chrome-on-centos7/
 
 
 
