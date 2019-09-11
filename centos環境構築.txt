@@ -61,6 +61,7 @@ make
 sudo make install
 /etc/shells に /usr/local/bin/zsh追加
 chsh
+chsh -s $(/usr/local/bin/zsh)
 rootも
 ●eclipse
 jdk入れる
