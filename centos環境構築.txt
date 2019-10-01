@@ -44,6 +44,7 @@ sh ./init.sh
 ●vim
 centosのhgはバージョン低くてだめぽい
 ubuntuからもらおう
+ubuntu apt build-dep vim
 export CPPFLAGS="-I/usr/include -I/usr/lib/perl5/CORE"
 export LD_LIBRARY_PATH=/usr/lib/
 perlはなくてもいいね
