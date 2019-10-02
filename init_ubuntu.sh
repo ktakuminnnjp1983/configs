@@ -33,6 +33,9 @@ fi
 if [ ! -e ${ROOT_GITHUBDIR}/vim ]; then
     git clone git@github.com:ktakuminnnjp1983/vim ${ROOT_GITHUBDIR}/vim
 fi
+if [ ! -e ${ROOT_GITHUBDIR}/scripts ]; then
+    git clone git@github.com:ktakuminnnjp1983/scripts ${ROOT_GITHUBDIR}/scripts
+fi
 
 if [ ! -e ~/.vim ]; then
     echo mk .vim
