@@ -9,6 +9,8 @@ sudo  apt install -y vm2
 sudo  apt install -y pcre pcre-devel
 sudo  apt install -y xz-devel
 sudo  apt install -y python-docutils
+sudo  apt build-dep vim
+sudo  apt build-dep zsh
 
 ROOTDIR=/home/kobayashi
 ROOT_GITDIR=${ROOTDIR}/gitdirs
@@ -44,6 +46,7 @@ ln -s ${ROOT_GITHUBDIR}/configs/.bashrc ~/.bashrc
 ln -s ${ROOT_GITHUBDIR}/configs/.zshrc ~/.zshrc 
 ln -s ${ROOT_GITHUBDIR}/vim/.vimrc ~/.vimrc 
 ln -s ${ROOT_GITHUBDIR}/configs/.gitconfig ~/.gitconfig
+ln -s ${ROOT_GITHUBDIR}/configs/.gitignore ~/.gitignore
 ln -s ${ROOT_GITHUBDIR}/configs/.gitignore ~/.gitignore
  
 
