@@ -30,7 +30,7 @@ fi
 if [ ! -e ${ROOT_GITHUBDIR}/configs ]; then
     git clone git@github.com:ktakuminnnjp1983/configs ${ROOT_GITHUBDIR}/configs
 fi
-if [ ! -e ${ROOT_GITHUBDIR}/vim ]; then
+if [ ! -e ${ROOT_GITHUBDIR}/vim ]; thenconfigs
     git clone git@github.com:ktakuminnnjp1983/vim ${ROOT_GITHUBDIR}/vim
 fi
 if [ ! -e ${ROOT_GITHUBDIR}/scripts ]; then
@@ -50,6 +50,7 @@ ln -s ${ROOT_GITHUBDIR}/configs/.zshrc ~/.zshrc
 ln -s ${ROOT_GITHUBDIR}/vim/.vimrc ~/.vimrc 
 ln -s ${ROOT_GITHUBDIR}/configs/.gitconfig ~/.gitconfig
 ln -s ${ROOT_GITHUBDIR}/configs/.gitignore ~/.gitignore
+ln -s ${ROOT_GITHUBDIR}/scripts/myscript ~/myscript
  
 
 if [ $UID -eq 0 -a ! -e ~/.vim ]; then
