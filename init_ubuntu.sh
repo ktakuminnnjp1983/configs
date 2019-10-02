@@ -47,7 +47,6 @@ ln -s ${ROOT_GITHUBDIR}/configs/.zshrc ~/.zshrc
 ln -s ${ROOT_GITHUBDIR}/vim/.vimrc ~/.vimrc 
 ln -s ${ROOT_GITHUBDIR}/configs/.gitconfig ~/.gitconfig
 ln -s ${ROOT_GITHUBDIR}/configs/.gitignore ~/.gitignore
-ln -s ${ROOT_GITHUBDIR}/configs/.gitignore ~/.gitignore
  
 
 if [ $UID -eq 0 -a ! -e ~/.vim ]; then
