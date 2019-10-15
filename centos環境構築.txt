@@ -107,6 +107,7 @@ nvm ls
 nvm ls-romote
 ●chrome
 https://www.karelie.net/how-to-install-google-chrome-on-centos7/
-
+●Ubuntu apt lock 問題
+http://nekomemo2.site/?eid=1757
 
 
