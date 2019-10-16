@@ -10,6 +10,7 @@ sudo  apt install -y pcre pcre-devel
 sudo  apt install -y xz-devel
 sudo  apt install -y python-docutils
 sudo  apt install -y ssh
+sudo  apt install -y ctags
 sudo  apt build-dep -y vim
 sudo  apt build-dep -y zsh
 
