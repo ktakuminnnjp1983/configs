@@ -4,14 +4,14 @@ sudo  apt install -y perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker
 sudo  apt install -y mercurial
 sudo  apt install -y ncurses ncurses-devel
 sudo  apt install -y python-devel ruby-devel
-sudo  apt install -y lua lua-devel
+sudo  apt install -y lua5.3 liblua5.3-dev
 sudo  apt install -y vm2
 sudo  apt install -y pcre pcre-devel
 sudo  apt install -y xz-devel
 sudo  apt install -y python-docutils
 sudo  apt install -y ssh
-sudo  apt build-dep vim
-sudo  apt build-dep zsh
+sudo  apt build-dep -y vim
+sudo  apt build-dep -y zsh
 
 ROOTDIR=/home/kobayashi
 ROOT_GITDIR=${ROOTDIR}/gitdirs
@@ -22,10 +22,6 @@ if [ ! -e ${ROOT_GITDIR} ]; then
 fi
 if [ ! -e ${ROOT_GITHUBDIR} ]; then
     mkdir ${ROOT_GITHUBDIR}
-fi
-
-if [ $UID -eq 0 -a ! -e ~/gitdirs ]; then
-    ln -s ${ROOT_GITDIR} ~/gitdirs
 fi
 
 if [ ! -e ${ROOT_GITHUBDIR}/configs ]; then
@@ -55,17 +51,6 @@ ln -s ${ROOT_GITHUBDIR}/vim/.vimrc ~/.vimrc
 ln -s ${ROOT_GITHUBDIR}/configs/.gitconfig ~/.gitconfig
 ln -s ${ROOT_GITHUBDIR}/configs/.gitignore ~/.gitignore
 ln -s ${ROOT_GITHUBDIR}/scripts/myscript ~/myscript
- 
-
-if [ $UID -eq 0 -a ! -e ~/.vim ]; then
-    ln -s ${ROOTDIR}/.vim ~/.vim 
-fi
-if [ $UID -eq 0 -a ! -e ~/.bash_history ]; then
-    ln -s ${ROOTDIR}/.bash_history ~/.bash_history 
-fi
-if [ $UID -eq 0 -a ! -e ~/.zsh_history ]; then
-    ln -s ${ROOTDIR}/.zsh_history ~/.zsh_history 
-fi
 
 if [ ! -e ~/.commonrc ]; then
     ln -s ${ROOT_GITHUBDIR}/configs/.commonrc ~/.commonrc
