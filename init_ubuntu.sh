@@ -31,7 +31,7 @@ fi
 if [ ! -e ${ROOT_GITHUBDIR}/configs ]; then
     git clone git@github.com:ktakuminnnjp1983/configs ${ROOT_GITHUBDIR}/configs
 fi
-if [ ! -e ${ROOT_GITHUBDIR}/vim ]; thenconfigs
+if [ ! -e ${ROOT_GITHUBDIR}/vim ]; then
     git clone git@github.com:ktakuminnnjp1983/vim ${ROOT_GITHUBDIR}/vim
 fi
 if [ ! -e ${ROOT_GITHUBDIR}/scripts ]; then
