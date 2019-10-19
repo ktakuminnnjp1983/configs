@@ -19,16 +19,22 @@ sudo apt install -y octave
 sudo apt install -y scilab
 sudo apt build-dep -y vim
 sudo apt build-dep -y zsh
+sudo apt install -y vim
+sudo apt install -y zsh
 
 ROOTDIR=/home/kobayashi
 ROOT_GITDIR=${ROOTDIR}/gitdirs
 ROOT_GITHUBDIR=${ROOT_GITDIR}/github
+ROOT_GITGITDIR=${ROOT_GITDIR}/git
 
 if [ ! -e ${ROOT_GITDIR} ]; then
     mkdir ${ROOT_GITDIR}
 fi
 if [ ! -e ${ROOT_GITHUBDIR} ]; then
     mkdir ${ROOT_GITHUBDIR}
+fi
+if [ ! -e ${ROOT_GITGITDIR} ]; then
+    mkdir ${ROOT_GITGITDIR}
 fi
 
 if [ ! -e ${ROOT_GITHUBDIR}/configs ]; then
