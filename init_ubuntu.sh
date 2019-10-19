@@ -19,7 +19,6 @@ sudo apt install -y octave
 sudo apt install -y scilab
 sudo apt build-dep -y vim
 sudo apt build-dep -y zsh
-sudo apt install -y vim
 sudo apt install -y zsh
 
 ROOTDIR=/home/kobayashi
@@ -54,6 +53,8 @@ if [ ! -e ~/.vim ]; then
     echo mk .vim
     mkdir ~/.vim
     mkdir ~/.vim/undo
+    mkdir ~/.vim/bundle
+    git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
     ln -s ${ROOT_GITHUBDIR}/vim/after ~/.vim
 fi
 
