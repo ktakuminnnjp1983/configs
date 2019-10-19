@@ -1,8 +1,8 @@
 #!/bin/sh
 
-sudo apt install gnome-session-flashback
-sudo apt install git
-sudo apt install curl
+sudo apt install -y gnome-session-flashback
+sudo apt install -y git
+sudo apt install -y curl
 sudo apt install -y perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker
 sudo apt install -y mercurial
 sudo apt install -y ncurses ncurses-devel
