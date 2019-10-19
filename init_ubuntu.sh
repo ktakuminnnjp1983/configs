@@ -14,6 +14,8 @@ sudo apt install -y xz-devel
 sudo apt install -y python-docutils
 sudo apt install -y ssh
 sudo apt install -y ctags
+sudo apt install -y octave
+sudo apt install -y scilab
 sudo apt build-dep -y vim
 sudo apt build-dep -y zsh
 
