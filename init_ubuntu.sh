@@ -20,6 +20,7 @@ sudo apt install -y scilab
 sudo apt build-dep -y vim
 sudo apt build-dep -y zsh
 sudo apt install -y zsh
+sudo apt install -y python-testresources
 
 ROOTDIR=/home/kobayashi
 ROOT_GITDIR=${ROOTDIR}/gitdirs
