@@ -21,6 +21,8 @@ sudo apt build-dep -y vim
 sudo apt build-dep -y zsh
 sudo apt install -y zsh
 sudo apt install -y python-testresources
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+sudo pip install jupyterlab
 
 ROOTDIR=/home/kobayashi
 ROOT_GITDIR=${ROOTDIR}/gitdirs
@@ -71,7 +73,7 @@ if [ ! -e ~/.commonrc ]; then
     ln -s ${ROOT_GITHUBDIR}/configs/.commonrc ~/.commonrc
 fi
 
-curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+
 
 
 
