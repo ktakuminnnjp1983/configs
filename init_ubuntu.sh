@@ -3,14 +3,14 @@
 sudo apt install -y gnome-session-flashback
 sudo apt install -y git
 sudo apt install -y curl
-sudo apt install -y perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker
+#sudo apt install -y perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker
 sudo apt install -y mercurial
-sudo apt install -y ncurses ncurses-devel
-sudo apt install -y python-devel ruby-devel
+#sudo apt install -y ncurses ncurses-devel
+#sudo apt install -y python-devel ruby-devel
 sudo apt install -y lua5.3 liblua5.3-dev
 sudo apt install -y vm2
-sudo apt install -y pcre pcre-devel
-sudo apt install -y xz-devel
+#sudo apt install -y pcre pcre-devel
+#sudo apt install -y xz-devel
 sudo apt install -y python-docutils
 sudo apt install -y ssh
 sudo apt install -y ctags
