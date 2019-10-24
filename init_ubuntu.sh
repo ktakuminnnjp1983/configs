@@ -71,3 +71,7 @@ if [ ! -e ~/.commonrc ]; then
     ln -s ${ROOT_GITHUBDIR}/configs/.commonrc ~/.commonrc
 fi
 
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+
+
+
