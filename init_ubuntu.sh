@@ -51,6 +51,9 @@ fi
 if [ ! -e ${ROOT_GITDIR}/nvm ]; then
     git clone git://github.com/creationix/nvm.git ${ROOT_GITDIR}/nvm
 fi
+if [ ! -e ${ROOT_GITGITDIR}/vim ]; then
+    git clone git@github.com:vim/vim.git ${ROOT_GITGITDIR}/vim
+fi
 
 if [ ! -e ~/.vim ]; then
     echo mk .vim
