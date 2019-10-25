@@ -22,6 +22,7 @@ sudo apt build-dep -y zsh
 sudo apt install -y zsh
 sudo apt install -y python-testresources
 curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+sudo python3 get-pip.py
 sudo pip install jupyterlab
 
 ROOTDIR=/home/kobayashi
