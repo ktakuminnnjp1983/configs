@@ -8,7 +8,7 @@ sudo apt install -y mercurial
 #sudo apt install -y ncurses ncurses-devel
 #sudo apt install -y python-devel ruby-devel
 sudo apt install -y lua5.3 liblua5.3-dev
-sudo apt install -y vm2
+#sudo apt install -y vm2
 #sudo apt install -y pcre pcre-devel
 #sudo apt install -y xz-devel
 sudo apt install -y python-docutils
