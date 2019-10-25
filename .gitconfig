@@ -2,10 +2,10 @@
 	name = Takumi Kobayashi
 	email = takumi.kobayashi@fujixerox.co.jp
 [http]
-	proxy = http://proxy.kdc.fujixerox.co.jp:8080
+	proxy = 
 	sslVerify = false
 [https]
-	proxy = https://proxy.kdc.fujixerox.co.jp:8080
+	proxy = 
 	sslVerify = false
 
 [diff]
