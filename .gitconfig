@@ -2,10 +2,10 @@
 	name = Takumi Kobayashi
 	email = takumi.kobayashi@fujixerox.co.jp
 [http]
-	proxy = 
+	proxy = http://autoproxy.kmt.kmtg.net:8080
 	sslVerify = false
 [https]
-	proxy = 
+	proxy = http://autoproxy.kmt.kmtg.net:8080
 	sslVerify = false
 
 [diff]
