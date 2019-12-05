@@ -1,31 +1,29 @@
-#!/bin/sh
-
-sudo apt install -y gnome-session-flashback
-sudo apt install -y git
-sudo apt install -y curl
+#!/bin/sh-E apt install -y gnome-session-flashback
+sudo -E apt install -y git
+sudo -E apt install -y curl
 #sudo apt install -y perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker
-sudo apt install -y mercurial
+sudo -E apt install -y mercurial
 #sudo apt install -y ncurses ncurses-devel
 #sudo apt install -y python-devel ruby-devel
-sudo apt install -y lua5.3 liblua5.3-dev
+sudo -E apt install -y lua5.3 liblua5.3-dev
 #sudo apt install -y vm2
 #sudo apt install -y pcre pcre-devel
 #sudo apt install -y xz-devel
-sudo apt install -y python-docutils
-sudo apt install -y ssh
-sudo apt install -y ctags
-sudo apt install -y silversearcher-ag
-sudo apt install -y octave
-sudo apt install -y scilab
-sudo apt build-dep -y vim
-sudo apt build-dep -y zsh
-sudo apt build-dep -y scilab
-sudo apt build-dep -y octave
-sudo apt install -y zsh
-sudo apt install -y python-testresources
+sudo -E apt install -y python-docutils
+sudo -E apt install -y ssh
+sudo -E apt install -y ctags
+sudo -E apt install -y silversearcher-ag
+sudo -E apt install -y octave
+sudo -E apt install -y scilab
+sudo -E apt build-dep -y vim
+sudo -E apt build-dep -y zsh
+sudo -E apt build-dep -y scilab
+sudo -E apt build-dep -y octave
+sudo -E apt install -y zsh
+sudo -E apt install -y python-testresources
 curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
-sudo python3 get-pip.py
-sudo pip install jupyterlab
+sudo -E python3 get-pip.py
+sudo -E pip install jupyterlab
 
 ROOTDIR=/home/kobayashi
 ROOT_GITDIR=${ROOTDIR}/gitdirs
