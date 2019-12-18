@@ -21,6 +21,7 @@ sudo -E apt build-dep -y scilab
 sudo -E apt build-dep -y octave
 sudo -E apt install -y zsh
 sudo -E apt install -y python-testresources
+sudo -E apt install -y subversion
 curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
 sudo -E python3 get-pip.py
 sudo -E pip install jupyterlab
